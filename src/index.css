@@ -1,0 +1,99 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(194, 134, 134);
+}
+
+/* 定义网格容器 */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    /* 列自适应，最小宽度200px */
+    grid-gap: 10px;
+    /* 列和行之间的间距 */
+    justify-content: center;
+    /* 在容器内部水平居中对齐 */
+    align-items: center;
+    /* 在容器内部垂直居中对齐 */
+}
+
+/* 定义网格项 */
+.item {
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    /* 确保内边距和边框不会改变盒子的尺寸 */
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    flex-direction: column;
+    /* 设置主轴方向为垂直，将子元素纵向排列 */
+}
+
+/* 定义书籍样式 */
+.book {
+    /* 设置位置 */
+    width: 200px;
+    height: 270px;
+    margin: auto;
+
+    /* 设置圆角 */
+    overflow: hidden;
+    border-radius: 4px 4px 0 4px;
+}
+/* 书左侧黑线 */
+.line{
+    position: absolute;
+    height: 268px;
+    width: 3px;
+    margin-left: 6px;
+    margin-top: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* 右侧书本内容 */
+.content_r {
+    position: absolute;
+    width: 3px;
+    height: 265px;
+    margin-top: 6px;
+    margin-left: 200px;
+    background-color: #CCCCCC;
+    border-top: solid 2px;
+    border-right: solid 3px;
+    border-bottom: solid 2px;
+    border-right-color: #E6E5E5;
+    border-top-color: #E6E5E5;
+    border-bottom-color: #E6E5E5;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* 左侧书本内容 */
+.content_b {
+    position: absolute;
+    width: 197px;
+    height: 3px;
+    margin-top: 270px;
+    margin-left: 4px;
+    background-color: #CCCCCC;
+    border-bottom: solid 2px;
+    border-bottom-color: #E6E5E5;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+/* 书本底部左侧阴影 */
+.line_b{
+    position: absolute;
+    height: 6px;
+    width: 2px;
+    margin-top: 269px;
+    background-color: #E6E5E5;
+    margin-left: 3px;
+    transform: rotate(-30deg);
+}
+/* 书本封面 */
+.book img{
+    width: 200px;
+    height: 270px;
+}
